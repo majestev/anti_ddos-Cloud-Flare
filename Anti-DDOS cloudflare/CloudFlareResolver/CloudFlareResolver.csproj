@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- Importa as propriedades comuns do MSBuild se o arquivo existir -->
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+
+  <!-- Configurações gerais do projeto -->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration> <!-- Modo de compilação padrão -->
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform> <!-- Suporte para qualquer arquitetura -->
+    <ProjectGuid>{ADCB74EE-2002-46AA-ADB9-28C7E465E26E}</ProjectGuid> <!-- Identificador único do projeto -->
+    <OutputType>WinExe</OutputType> <!-- Tipo de saída: Aplicativo Windows -->
+    <RootNamespace>CloudFlareResolver</RootNamespace> <!-- Namespace raiz -->
+    <AssemblyName>CloudFlareResolver</AssemblyName> <!-- Nome do assembly gerado -->
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion> <!-- Versão do .NET Framework -->
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+
+  <!-- Configurações específicas para Debug -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols> <!-- Gera símbolos de depuração -->
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize> <!-- Não otimiza o código -->
+    <OutputPath>bin\Debug\</OutputPath> <!-- Pasta de saída -->
+    <DefineConstants>DEBUG;TRACE</DefineConstants> <!-- Constantes de compilação -->
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel> <!-- Nível máximo de avisos -->
+  </PropertyGroup>
+
+  <!-- Configurações específicas para Release -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize> <!-- Ativa otimização de código -->
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <!-- Referências a bibliotecas usadas no projeto -->
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+
+  <!-- Arquivos de código e recursos -->
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+
+  <!-- Arquivos adicionais não compilados -->
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+
+  <!-- Importa as configurações padrão do compilador C# -->
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

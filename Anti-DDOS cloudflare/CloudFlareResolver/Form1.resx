@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Esquema Microsoft ResX 
+    
+    Versão 2.0
+    
+    O objetivo principal desse formato é permitir um formato XML simples 
+    que seja principalmente legível por humanos. A geração e análise dos 
+    vários tipos de dados são feitas através das classes TypeConverter 
+    associadas aos tipos de dados.
+    
+    Exemplo:
+    
+    ... cabeçalhos e esquema ado.net/XML ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>esta é minha string longa</value><comment>este é um comentário</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Azul</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[objeto serializado do .NET Framework codificado em base64]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[string codificada em base64 representando um array de bytes do objeto .NET Framework]</value>
+        <comment>Este é um comentário</comment>
+    </data>
+                
+    Existem várias linhas "resheader" que contêm pares simples de 
+    nome/valor.
+    
+    Cada linha de dados contém um nome e um valor. A linha também contém um 
+    tipo ou mimetype. Tipo corresponde a uma classe .NET que suporta 
+    conversão texto/valor através da arquitetura TypeConverter. 
+    Classes que não suportam isso são serializadas e armazenadas com o 
+    mimetype definido.
+    
+    O mimetype é usado para objetos serializados e informa ao 
+    ResXResourceReader como desserializar o objeto. Atualmente isso não é 
+    extensível. Para um dado mimetype, o valor deve ser configurado da seguinte forma:
+    
+    Nota - application/x-microsoft.net.object.binary.base64 é o formato 
+    que o ResXResourceWriter gera, porém o leitor pode ler qualquer um dos formatos listados abaixo.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    valor   : O objeto deve ser serializado com 
+              : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+              : e depois codificado com base64.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    valor   : O objeto deve ser serializado com 
+              : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+              : e depois codificado com base64.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    valor   : O objeto deve ser serializado em um array de bytes 
+              : usando um System.ComponentModel.TypeConverter
+              : e depois codificado com base64.
+  -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <!-- Definições do esquema XML omitidas para brevidade -->
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>
